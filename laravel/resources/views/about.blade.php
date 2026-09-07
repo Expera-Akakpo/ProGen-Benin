@@ -12,37 +12,8 @@
 </head>
 <body>
 
-  <!-- NAVBAR (Blade : @include('partials.navbar')) -->
-  <nav class="navbar navbar-expand-lg fixed-top py-2">
-    <div class="container">
-      <a class="navbar-brand py-0 d-flex align-items-center justify-content-center" href="index.html" style="height: 60px;">
-          <div style="width: 200px; height: 55px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-              <img src="img/ProGen.png" alt="Logo Pro Gen Bénin" style="width: 240px; max-width: none; height: auto; object-fit: contain;padding-top: 20%">
-          </div>
-      </a>
-
-      <button class="navbar-toggler border-light" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-        aria-controls="mainNav" aria-expanded="false" aria-label="Menu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
-          <li class="nav-item"><a class="nav-link" href="index.html" data-fr="Accueil" data-en="Home">Accueil</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html" data-fr="À propos" data-en="About">À propos</a></li>
-          <li class="nav-item"><a class="nav-link" href="team.html" data-fr="Équipe" data-en="Team">Équipe</a></li>
-          <li class="nav-item"><a class="nav-link" href="projects.html" data-fr="Projets" data-en="Projects">Projets</a></li>
-          <li class="nav-item"><a class="nav-link" href="news.html" data-fr="Actualités" data-en="News">Actualités</a></li>
-          <li class="nav-item"><a class="nav-link" href="support.html" data-fr="Nous soutenir" data-en="Support us">Nous soutenir</a></li>
-          <li class="nav-item"><a class="nav-link" href="partner.html" data-fr="Devenir partenaire" data-en="Become a partner">Devenir partenaire</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html" data-fr="Contact" data-en="Contact">Contact</a></li>
-          <li class="nav-item ms-lg-2">
-            <button type="button" class="lang-switch btn btn-outline-light btn-sm px-2 py-1" aria-label="Changer de langue">EN</button>
-          </li>
-        </ul>
-      </div>
-    </div>
-</nav>
+  <!-- NAVBAR (Blade :  -->
+ @include('nav');
 
   <!-- HÉRO DE PAGE -->
   <header class="page-hero">
@@ -139,7 +110,7 @@
     </div>
   </section>
 
-  <!-- PIED DE PAGE (Blade : @include('partials.footer')) -->
+  <!-- PIED DE PAGE (Blade :  -->
   <footer class="site-footer pt-5 pb-4">
     <div class="container">
       <div class="row g-4">
