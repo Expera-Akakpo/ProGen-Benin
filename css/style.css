@@ -82,6 +82,9 @@ a { text-decoration: none; }
   letter-spacing: 0.3px;
   color: #fff !important;
 }
+.navbar-brand img {
+  padding-top: 0 !important;
+}
 .navbar-brand .brand-mark {
   display: inline-flex;
   align-items: center;
@@ -97,6 +100,7 @@ a { text-decoration: none; }
 .navbar .nav-link {
   color: rgba(15, 2, 31, 0.85) !important;
   font-weight: 500;
+  font-size: 0.9rem;
   padding: 0.5rem 0.85rem !important;
 }
 .navbar .nav-link:hover,
@@ -118,14 +122,14 @@ a { text-decoration: none; }
   position: relative;
   color: #fff;
   background:
-    linear-gradient(rgba(10, 25, 47, 0.82), rgba(10, 25, 47, 0.82)),
+    linear-gradient(rgba(10, 25, 47, 0.62), rgba(10, 25, 47, 0.62)),
     url("https://images.unsplash.com/photo-1594708767771-a7502209ff51?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
   padding: 6rem 0;
 }
 .hero h1 { color: #fff; }
 .page-hero {
   background:
-    linear-gradient(rgba(10, 25, 47, 0.85), rgba(18, 40, 77, 0.9)),
+    linear-gradient(rgba(10, 25, 47, 0.65), rgba(18, 40, 77, 0.7)),
     url("https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
   color: #fff;
   padding: 4rem 0;
@@ -143,6 +147,12 @@ a { text-decoration: none; }
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 14px 34px rgba(10, 25, 47, 0.16);
+}
+.news-card {
+  border-top: 4px solid var(--pjb-blue);
+}
+.news-card .card-body {
+  background: linear-gradient(180deg, #f8fbff 0%, #fff 42%);
 }
 .card-img-cover {
   height: 210px;
@@ -223,6 +233,29 @@ footer.site-footer a:hover { color: var(--pjb-blue); }
   border-radius: 16px;
   box-shadow: 0 8px 28px rgba(10, 25, 47, 0.08);
 }
+.floating-donation {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 1030;
+  width: 56px;
+  height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--pjb-navy);
+  color: #fff;
+  font-size: 1.25rem;
+  box-shadow: 0 8px 22px rgba(10, 25, 47, 0.28);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.floating-donation:hover,
+.floating-donation:focus-visible {
+  color: #fff;
+  background: var(--pjb-blue);
+  transform: translateY(-3px);
+}
 .donation-amount-btn.active {
   background-color: var(--pjb-navy);
   color: #fff;
@@ -240,4 +273,139 @@ footer.site-footer a:hover { color: var(--pjb-blue); }
 .value-icon {
   color: var(--pjb-navy);
   font-size: 1.4rem;
+}
+
+/* ---------- Responsive ---------- */
+.detail-hero-image {
+  width: 100%;
+  max-height: 240px;
+  object-fit: cover;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-brand > div {
+    width: 170px !important;
+  }
+
+  .navbar-collapse {
+    max-height: calc(100vh - 76px);
+    overflow-y: auto;
+  }
+
+  .navbar .nav-link {
+    padding: 0.65rem 0.75rem !important;
+  }
+
+  .navbar .lang-switch {
+    margin: 0.5rem 0.75rem;
+  }
+
+  .hero {
+    padding: 5rem 0;
+  }
+
+  .page-hero {
+    padding: 3.5rem 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  body {
+    padding-top: 70px;
+  }
+
+  .navbar-brand > div {
+    width: 145px !important;
+    height: 50px !important;
+  }
+
+  .navbar-brand img {
+    width: 210px !important;
+  }
+
+  .hero {
+    padding: 4rem 0;
+  }
+
+  .page-hero {
+    padding: 2.75rem 0;
+  }
+
+  .hero h1,
+  .page-hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero .lead,
+  .page-hero .lead {
+    font-size: 1rem;
+  }
+
+  .card-img-cover {
+    height: 180px;
+  }
+
+  .form-section-card {
+    padding: 1.25rem !important;
+  }
+
+  .nav-pills {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    justify-content: flex-start !important;
+  }
+
+  .nav-pills .nav-item {
+    flex: 1 0 auto;
+  }
+
+  .nav-pills .nav-link {
+    white-space: nowrap;
+    padding: 0.55rem 0.65rem;
+    font-size: 0.8rem;
+  }
+
+  .detail-hero-image {
+    max-height: 200px;
+  }
+
+  .floating-donation {
+    right: 1rem;
+    bottom: 1rem;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  h2 {
+    font-size: 1.55rem;
+  }
+
+  .display-4,
+  .display-5 {
+    font-size: 1.85rem;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .btn-lg {
+    font-size: 0.95rem;
+  }
+
+  .detail-hero-image {
+    max-height: 170px;
+  }
+
+  .cta-band .btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
 }

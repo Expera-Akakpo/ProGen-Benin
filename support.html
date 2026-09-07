@@ -32,13 +32,10 @@
           <li class="nav-item"><a class="nav-link" href="about.html" data-fr="À propos" data-en="About">À propos</a></li>
           <li class="nav-item"><a class="nav-link" href="team.html" data-fr="Équipe" data-en="Team">Équipe</a></li>
           <li class="nav-item"><a class="nav-link" href="projects.html" data-fr="Projets" data-en="Projects">Projets</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#actualites" data-fr="Actualités" data-en="News">Actualités</a></li>
+          <li class="nav-item"><a class="nav-link" href="news.html" data-fr="Actualités" data-en="News">Actualités</a></li>
           <li class="nav-item"><a class="nav-link" href="support.html" data-fr="Nous soutenir" data-en="Support us">Nous soutenir</a></li>
           <li class="nav-item"><a class="nav-link" href="partner.html" data-fr="Devenir partenaire" data-en="Become a partner">Devenir partenaire</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html" data-fr="Contact" data-en="Contact">Contact</a></li>
-          <li class="nav-item ms-lg-2 my-2 my-lg-0">
-            <a class="btn btn-accent btn-sm px-3 py-2" href="support.html#don" data-fr="Faire un don" data-en="Donate Now">Faire un don</a>
-          </li>
           <li class="nav-item ms-lg-2">
             <button type="button" class="lang-switch btn btn-outline-light btn-sm px-2 py-1" aria-label="Changer de langue">EN</button>
           </li>
@@ -76,6 +73,9 @@
                 <button class="nav-link" data-bs-toggle="pill" data-bs-target="#mensuel" type="button" role="tab" data-fr="Mensuel" data-en="Monthly">Mensuel</button>
               </li>
               <li class="nav-item" role="presentation">
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#trimestriel" type="button" role="tab" data-fr="Trimestriel" data-en="Quarterly">Trimestriel</button>
+              </li>
+              <li class="nav-item" role="presentation">
                 <button class="nav-link" data-bs-toggle="pill" data-bs-target="#annuel" type="button" role="tab" data-fr="Annuel" data-en="Yearly">Annuel</button>
               </li>
             </ul>
@@ -87,20 +87,12 @@
               <div class="tab-pane fade" id="mensuel" role="tabpanel">
                 <p class="text-muted small mb-0" data-fr="Un soutien régulier qui nous aide à planifier nos projets." data-en="Regular support that helps us plan our projects.">Un soutien régulier qui nous aide à planifier nos projets.</p>
               </div>
+              <div class="tab-pane fade" id="trimestriel" role="tabpanel">
+                <p class="text-muted small mb-0" data-fr="Un soutien tous les trois mois pour accompagner nos actions dans la durée." data-en="Support every three months to sustain our actions over time.">Un soutien tous les trois mois pour accompagner nos actions dans la durée.</p>
+              </div>
               <div class="tab-pane fade" id="annuel" role="tabpanel">
                 <p class="text-muted small mb-0" data-fr="Un engagement annuel pour un impact durable." data-en="A yearly commitment for lasting impact.">Un engagement annuel pour un impact durable.</p>
               </div>
-            </div>
-
-            <!-- Boutons de montant -->
-            <label class="form-label fw-semibold" data-fr="Choisir un montant (FCFA)" data-en="Choose an amount (XOF)">Choisir un montant (FCFA)</label>
-            <div class="row g-2 mb-3">
-              <div class="col-4"><button type="button" class="btn btn-outline-navy w-100 donation-amount-btn" data-amount="5000">5 000</button></div>
-              <div class="col-4"><button type="button" class="btn btn-outline-navy w-100 donation-amount-btn" data-amount="10000">10 000</button></div>
-              <div class="col-4"><button type="button" class="btn btn-outline-navy w-100 donation-amount-btn" data-amount="25000">25 000</button></div>
-              <div class="col-4"><button type="button" class="btn btn-outline-navy w-100 donation-amount-btn" data-amount="50000">50 000</button></div>
-              <div class="col-4"><button type="button" class="btn btn-outline-navy w-100 donation-amount-btn" data-amount="100000">100 000</button></div>
-              <div class="col-4"><button type="button" class="btn btn-outline-navy w-100 donation-amount-btn" data-amount="250000">250 000</button></div>
             </div>
 
             <form onsubmit="return false;">
@@ -112,8 +104,12 @@
                 </div>
               </div>
               <div class="row g-3">
-                <div class="col-md-6"><input type="text" class="form-control" data-fr-ph="Nom complet" data-en-ph="Full name" placeholder="Nom complet" /></div>
-                <div class="col-md-6"><input type="email" class="form-control" data-fr-ph="Adresse email" data-en-ph="Email address" placeholder="Adresse email" /></div>
+                <div class="col-md-6"><label for="donorName" class="visually-hidden">Nom complet</label><input type="text" class="form-control" id="donorName" data-fr-ph="Nom complet" data-en-ph="Full name" placeholder="Nom complet" /></div>
+                <div class="col-md-6"><label for="donorEmail" class="visually-hidden">Adresse email</label><input type="email" class="form-control" id="donorEmail" data-fr-ph="Adresse email" data-en-ph="Email address" placeholder="Adresse email" /></div>
+              </div>
+              <div class="form-check mt-3">
+                <input class="form-check-input" type="checkbox" id="anonymousDonation" />
+                <label class="form-check-label" for="anonymousDonation" data-fr="Je souhaite rester anonyme" data-en="I want to remain anonymous">Je souhaite rester anonyme</label>
               </div>
               <button type="submit" class="btn btn-accent btn-lg w-100 mt-4" data-fr="Faire un don maintenant" data-en="Donate now">Faire un don maintenant</button>
               <p class="text-center text-muted small mt-3 mb-0"><i class="bi bi-lock-fill me-1"></i><span data-fr="Paiement 100 % sécurisé" data-en="100% secure payment">Paiement 100 % sécurisé</span></p>
@@ -133,44 +129,36 @@
         <span class="section-eyebrow" data-fr="Don en nature" data-en="In-kind donation">Don en nature</span>
         <h2 class="mt-2" data-fr="Donner du matériel" data-en="Donate goods">Donner du matériel</h2>
       </div>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card h-100 p-4 text-center">
-            <div class="icon-badge mx-auto mb-3"><i class="bi bi-easel"></i></div>
-            <h5 data-fr="Mobilier scolaire" data-en="School furniture">Mobilier scolaire</h5>
-            <p class="text-muted small" data-fr="Tables, bancs, tableaux et matériel de classe." data-en="Tables, benches, boards and classroom materials.">Tables, bancs, tableaux et matériel de classe.</p>
-            <div class="d-flex justify-content-center gap-2 mt-auto">
-              <a href="mailto:dons@projeunebenin.org" class="btn btn-sm btn-outline-navy" aria-label="Email"><i class="bi bi-envelope"></i></a>
-              <a href="https://wa.me/22901000000000" class="btn btn-sm btn-outline-navy" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-              <a href="tel:+22901000000000" class="btn btn-sm btn-outline-navy" aria-label="Appel"><i class="bi bi-telephone"></i></a>
-            </div>
+      <form id="inKindDonationForm" class="form-section-card p-4 p-md-5" onsubmit="return false;">
+        <div class="mb-3">
+          <label for="inKindType" class="form-label fw-semibold" data-fr="Quel don souhaitez-vous proposer ?" data-en="What would you like to donate?">Quel don souhaitez-vous proposer ?</label>
+          <select id="inKindType" class="form-select" required>
+            <option value="" data-fr="Sélectionner un don" data-en="Select a donation">Sélectionner un don</option>
+            <option value="Mobilier scolaire" data-fr="Mobilier scolaire" data-en="School furniture">Mobilier scolaire</option>
+            <option value="Denrées alimentaires" data-fr="Denrées alimentaires" data-en="Food supplies">Denrées alimentaires</option>
+            <option value="Fournitures et livres" data-fr="Fournitures et livres" data-en="Supplies and books">Fournitures et livres</option>
+            <option value="Matériel informatique" data-fr="Matériel informatique" data-en="Computer equipment">Matériel informatique</option>
+            <option value="Autre" data-fr="Autre" data-en="Other">Autre</option>
+          </select>
+        </div>
+        <div id="otherDonationGroup" class="mb-3 d-none">
+          <label for="otherDonation" class="form-label fw-semibold" data-fr="Précisez votre don" data-en="Describe your donation">Précisez votre don</label>
+          <input id="otherDonation" type="text" class="form-control" data-fr-ph="Ex. : matériel médical" data-en-ph="E.g. medical equipment" placeholder="Ex. : matériel médical" />
+        </div>
+        <div class="row g-3">
+          <div class="col-md-6"><input id="inKindName" type="text" class="form-control" data-fr-ph="Nom complet" data-en-ph="Full name" placeholder="Nom complet" required /></div>
+          <div class="col-md-6"><input id="inKindPhone" type="tel" class="form-control" data-fr-ph="Téléphone" data-en-ph="Phone number" placeholder="Téléphone" required /></div>
+        </div>
+        <div id="contactChoices" class="mt-4">
+          <p class="form-label fw-semibold mb-2" data-fr="Choisissez un moyen de contact" data-en="Choose a contact method">Choisissez un moyen de contact</p>
+          <div class="d-flex flex-wrap gap-2">
+            <button type="button" class="btn btn-outline-navy contact-choice" data-contact="email"><i class="bi bi-envelope me-1"></i><span data-fr="E-mail" data-en="Email">E-mail</span></button>
+            <button type="button" class="btn btn-outline-navy contact-choice" data-contact="whatsapp"><i class="bi bi-whatsapp me-1"></i>WhatsApp</button>
+            <button type="button" class="btn btn-outline-navy contact-choice" data-contact="phone"><i class="bi bi-telephone me-1"></i><span data-fr="Appel" data-en="Call">Appel</span></button>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card h-100 p-4 text-center">
-            <div class="icon-badge mx-auto mb-3"><i class="bi bi-basket"></i></div>
-            <h5 data-fr="Soutien alimentaire" data-en="Food support">Soutien alimentaire</h5>
-            <p class="text-muted small" data-fr="Denrées non périssables et kits alimentaires." data-en="Non-perishable food and food kits.">Denrées non périssables et kits alimentaires.</p>
-            <div class="d-flex justify-content-center gap-2 mt-auto">
-              <a href="mailto:dons@projeunebenin.org" class="btn btn-sm btn-outline-navy" aria-label="Email"><i class="bi bi-envelope"></i></a>
-              <a href="https://wa.me/22901000000000" class="btn btn-sm btn-outline-navy" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-              <a href="tel:+22901000000000" class="btn btn-sm btn-outline-navy" aria-label="Appel"><i class="bi bi-telephone"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100 p-4 text-center">
-            <div class="icon-badge mx-auto mb-3"><i class="bi bi-book-half"></i></div>
-            <h5 data-fr="Fournitures &amp; livres" data-en="Supplies &amp; books">Fournitures &amp; livres</h5>
-            <p class="text-muted small" data-fr="Cahiers, manuels, ordinateurs et matériel pédagogique." data-en="Notebooks, textbooks, computers and learning materials.">Cahiers, manuels, ordinateurs et matériel pédagogique.</p>
-            <div class="d-flex justify-content-center gap-2 mt-auto">
-              <a href="mailto:dons@projeunebenin.org" class="btn btn-sm btn-outline-navy" aria-label="Email"><i class="bi bi-envelope"></i></a>
-              <a href="https://wa.me/22901000000000" class="btn btn-sm btn-outline-navy" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-              <a href="tel:+22901000000000" class="btn btn-sm btn-outline-navy" aria-label="Appel"><i class="bi bi-telephone"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
+        <div id="contactLinks" class="mt-3 d-flex flex-wrap gap-2"></div>
+      </form>
     </div>
   </section>
 
