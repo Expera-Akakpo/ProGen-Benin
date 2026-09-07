@@ -1,0 +1,243 @@
+/* ============================================================
+   Pro Jeune Bénin – Feuille de style personnalisée
+   Palette : blanc pur + bleu marine foncé
+   S'appuie sur Bootstrap 5 (CDN). Facile à intégrer dans Blade.
+   ============================================================ */
+
+:root {
+  --pjb-navy: #0a192f;        /* bleu nuit principal */
+  --pjb-navy-2: #12284d;      /* bleu marine secondaire */
+  --pjb-blue: #1e3a8a;        /* bleu accent */
+  --pjb-accent: #0a192f;      /* remplacé par bleu nuit */
+  --pjb-accent-2: #1e3a8a;    /* remplacé par bleu accent */
+  --pjb-muted: #64748b;       /* gris texte secondaire */
+  --pjb-light: #f5f7fb;       /* fond clair */
+}
+
+/* ---------- Base ---------- */
+body {
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: #1f2937;
+  padding-top: 76px; /* compense la navbar fixe */
+}
+
+h1, h2, h3, h4, h5, .display-4, .display-5 {
+  font-weight: 700;
+  color: var(--pjb-navy);
+}
+
+.text-navy { color: var(--pjb-navy) !important; }
+.text-accent { color: var(--pjb-navy) !important; }
+.bg-navy { background-color: var(--pjb-navy) !important; }
+.bg-navy-2 { background-color: var(--pjb-navy-2) !important; }
+.bg-light-soft { background-color: var(--pjb-light) !important; }
+
+a { text-decoration: none; }
+
+/* ---------- Boutons ---------- */
+.btn-accent {
+  background-color: var(--pjb-navy);
+  border-color: var(--pjb-navy);
+  color: #fff;
+  font-weight: 600;
+}
+.btn-accent:hover,
+.btn-accent:focus {
+  background-color: var(--pjb-navy-2);
+  border-color: var(--pjb-navy-2);
+  color: #fff;
+}
+
+.btn-navy {
+  background-color: var(--pjb-navy);
+  border-color: var(--pjb-navy);
+  color: #fff;
+  font-weight: 600;
+}
+.btn-navy:hover,
+.btn-navy:focus {
+  background-color: var(--pjb-navy-2);
+  border-color: var(--pjb-navy-2);
+  color: #fff;
+}
+
+.btn-outline-navy {
+  border-color: var(--pjb-navy);
+  color: var(--pjb-navy);
+  font-weight: 600;
+}
+.btn-outline-navy:hover {
+  background-color: var(--pjb-navy);
+  color: #fff;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  background-color: rgba(250, 250, 247, 0.98);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 14px rgba(10, 25, 47, 0.15);
+}
+.navbar-brand {
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  color: #fff !important;
+}
+.navbar-brand .brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--pjb-navy), var(--pjb-blue));
+  color: #fff;
+  font-weight: 900;
+  margin-right: 10px;
+}
+.navbar .nav-link {
+  color: rgba(15, 2, 31, 0.85) !important;
+  font-weight: 500;
+  padding: 0.5rem 0.85rem !important;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: var(--pjb-blue) !important;
+}
+.lang-switch {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+}
+.lang-switch:hover { background: rgba(255, 255, 255, 0.12); color: #fff; }
+
+/* ---------- Héros ---------- */
+.hero {
+  position: relative;
+  color: #fff;
+  background:
+    linear-gradient(rgba(10, 25, 47, 0.82), rgba(10, 25, 47, 0.82)),
+    url("https://images.unsplash.com/photo-1594708767771-a7502209ff51?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+  padding: 6rem 0;
+}
+.hero h1 { color: #fff; }
+.page-hero {
+  background:
+    linear-gradient(rgba(10, 25, 47, 0.85), rgba(18, 40, 77, 0.9)),
+    url("https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+  color: #fff;
+  padding: 4rem 0;
+}
+.page-hero h1 { color: #fff; }
+
+/* ---------- Cartes ---------- */
+.card {
+  border: none;
+  border-radius: 14px;
+  box-shadow: 0 6px 22px rgba(10, 25, 47, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 34px rgba(10, 25, 47, 0.16);
+}
+.card-img-cover {
+  height: 210px;
+  object-fit: cover;
+  width: 100%;
+}
+.icon-badge {
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  background: rgba(10, 25, 47, 0.08);
+  color: var(--pjb-navy);
+}
+
+/* ---------- Statistiques ---------- */
+.stats-section { background-color: var(--pjb-navy); color: #fff; }
+.stat-number {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+}
+.stat-label { color: rgba(255, 255, 255, 0.8); }
+
+/* ---------- Section CTA ---------- */
+.cta-band {
+  background: linear-gradient(135deg, var(--pjb-navy), var(--pjb-blue));
+  color: #fff;
+}
+
+/* ---------- Témoignages ---------- */
+.testimonial-quote {
+  font-style: italic;
+  color: #374151;
+}
+.testimonial-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ---------- Alerte urgence ---------- */
+.emergency-banner {
+  background-color: var(--pjb-navy);
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ---------- Pied de page ---------- */
+footer.site-footer {
+  background-color: var(--pjb-navy);
+  color: rgba(255, 255, 255, 0.75);
+}
+footer.site-footer h5 { color: #fff; }
+footer.site-footer a { color: rgba(255, 255, 255, 0.75); }
+footer.site-footer a:hover { color: var(--pjb-blue); }
+.social-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  transition: background 0.2s ease;
+}
+.social-icon:hover { background: var(--pjb-navy-2); color: #fff; }
+
+/* ---------- Formulaires ---------- */
+.form-section-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 28px rgba(10, 25, 47, 0.08);
+}
+.donation-amount-btn.active {
+  background-color: var(--pjb-navy);
+  color: #fff;
+  border-color: var(--pjb-navy);
+}
+
+/* ---------- Divers ---------- */
+.section-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--pjb-blue);
+}
+.value-icon {
+  color: var(--pjb-navy);
+  font-size: 1.4rem;
+}
