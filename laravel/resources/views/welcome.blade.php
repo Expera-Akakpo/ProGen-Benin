@@ -22,7 +22,6 @@
 <body>
 
   <!-- ============================================================
-       NAVBAR  (Blade : @include('partials.navbar'))
        ============================================================ -->
  <nav class="navbar navbar-expand-lg fixed-top py-2">
     <div class="container">
@@ -387,7 +386,6 @@
   </section>
 
   <!-- ============================================================
-       7. PIED DE PAGE  (Blade : @include('partials.footer'))
        ============================================================ -->
   <footer class="site-footer pt-5 pb-4">
     <div class="container">
