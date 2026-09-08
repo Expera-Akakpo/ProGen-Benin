@@ -83,6 +83,22 @@
     </div>
   </section>
 
+  <section class="partner-strip py-5 bg-light-soft" aria-labelledby="partner-list-title">
+    <div class="container">
+      <div class="text-center mb-4">
+        <span class="section-eyebrow" data-fr="Notre reseau" data-en="Our network">Notre reseau</span>
+        <h2 id="partner-list-title" class="mt-2" data-fr="Les partenaires qui nous font confiance" data-en="Partners who trust us">Les partenaires qui nous font confiance</h2>
+      </div>
+      <div class="row g-3 justify-content-center">
+        <div class="col-6 col-md-3"><a class="partner-logo partner-logo-static" href="https://example.com" target="_blank" rel="noopener"><span>FH</span><small>Fondation Horizon</small></a></div>
+        <div class="col-6 col-md-3"><a class="partner-logo partner-logo-static" href="https://example.com" target="_blank" rel="noopener"><span>EB</span><small>Eco Benin</small></a></div>
+        <div class="col-6 col-md-3"><a class="partner-logo partner-logo-static" href="https://example.com" target="_blank" rel="noopener"><span>CA</span><small>Communautes Actives</small></a></div>
+        <div class="col-6 col-md-3"><a class="partner-logo partner-logo-static" href="https://example.com" target="_blank" rel="noopener"><span>AS</span><small>Avenir Solidaire</small></a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PIED DE PAGE (Blade : @include('partials.footer')) -->
   <footer class="site-footer pt-5 pb-4">
     <div class="container">
       <div class="row g-4">

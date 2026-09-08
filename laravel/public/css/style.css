@@ -275,6 +275,19 @@ footer.site-footer a:hover { color: var(--pjb-blue); }
   font-size: 1.4rem;
 }
 
+/* ---------- Partenaires ---------- */
+.partner-strip { background: #fff; overflow: hidden; }
+.partner-carousel { overflow: hidden; width: 100%; }
+.partner-track { display: flex; width: max-content; gap: 1rem; animation: partner-scroll 28s linear infinite; }
+.partner-carousel:hover .partner-track { animation-play-state: paused; }
+.partner-logo { min-width: 180px; min-height: 92px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .45rem; border: 1px solid #e5eaf2; border-radius: 12px; background: #fff; color: var(--pjb-navy); box-shadow: 0 5px 18px rgba(10, 25, 47, .06); }
+.partner-logo span { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 50%; background: var(--pjb-navy); color: #fff; font-size: .8rem; font-weight: 800; }
+.partner-logo small { font-size: .72rem; color: #68768a; }
+.partner-logo:hover { color: var(--pjb-blue); border-color: var(--pjb-blue); transform: translateY(-3px); }
+.partner-logo-static { width: 100%; min-width: 0; transition: transform .2s ease, border-color .2s ease; }
+@keyframes partner-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .partner-track { animation: none; } }
+
 /* ---------- Responsive ---------- */
 .detail-hero-image {
   width: 100%;

@@ -364,6 +364,27 @@
     </div>
   </section>
 
+  <section class="partner-strip py-5" aria-labelledby="home-partners-title">
+    <div class="container">
+      <div class="text-center mb-4">
+        <span class="section-eyebrow" data-fr="Ils nous accompagnent" data-en="They support us">Ils nous accompagnent</span>
+        <h2 id="home-partners-title" class="mt-2" data-fr="Nos partenaires" data-en="Our partners">Nos partenaires</h2>
+      </div>
+      <div class="partner-carousel" aria-label="Partenaires de Pro Gen Bénin">
+        <div class="partner-track">
+          <a class="partner-logo" href="https://example.com" target="_blank" rel="noopener"><span>FH</span><small>Fondation Horizon</small></a>
+          <a class="partner-logo" href="https://example.com" target="_blank" rel="noopener"><span>EB</span><small>Eco Benin</small></a>
+          <a class="partner-logo" href="https://example.com" target="_blank" rel="noopener"><span>CA</span><small>Communautes Actives</small></a>
+          <a class="partner-logo" href="https://example.com" target="_blank" rel="noopener"><span>AS</span><small>Avenir Solidaire</small></a>
+          <a class="partner-logo" href="https://example.com" target="_blank" rel="noopener"><span>FH</span><small>Fondation Horizon</small></a>
+          <a class="partner-logo" href="https://example.com" target="_blank" rel="noopener"><span>EB</span><small>Eco Benin</small></a>
+          <a class="partner-logo" href="https://example.com" target="_blank" rel="noopener"><span>CA</span><small>Communautes Actives</small></a>
+          <a class="partner-logo" href="https://example.com" target="_blank" rel="noopener"><span>AS</span><small>Avenir Solidaire</small></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ============================================================
        ============================================================ -->
   <footer class="site-footer pt-5 pb-4">
